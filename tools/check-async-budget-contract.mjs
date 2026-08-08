@@ -7,6 +7,8 @@ const php = fs.readFileSync(path.join(root, 'mcp-abilities-check-runner.php'), '
 for (const [pattern, description] of [
   [/'async_job_terminated'/, 'terminal shutdown receipt'],
   [/max\( 1, min\( 500, \(int\) \$input\['max_results'\]/, 'result details remain bounded'],
+  [/Requires Plugins: plugin-check/, 'native Plugin Check dependency declaration'],
+  [/requires WordPress core Abilities API support/, 'WordPress 6.9 core Abilities requirement'],
 ]) {
   if (!pattern.test(php)) throw new Error(`Contract assertion failed: ${description}`);
 }
@@ -19,4 +21,4 @@ for (const [pattern, description] of [
   if (pattern.test(php)) throw new Error(`Forbidden pattern found: ${description}`);
 }
 
-console.log(JSON.stringify({ success: true, assertions: 2, forbidden_checks: 3 }));
+console.log(JSON.stringify({ success: true, assertions: 4, forbidden_checks: 3 }));

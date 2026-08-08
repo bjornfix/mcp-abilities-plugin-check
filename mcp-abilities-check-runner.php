@@ -10,6 +10,7 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  * Requires at least: 6.9
  * Requires PHP: 8.0
+ * Requires Plugins: plugin-check
  *
  * @package MCP_Abilities_Plugin_Check
  */
@@ -28,7 +29,7 @@ function mcp_check_runner_dependencies_ok(): bool {
 		add_action(
 			'admin_notices',
 			static function (): void {
-				echo '<div class="notice notice-error"><p><strong>MCP Abilities - Check Runner</strong> requires the Abilities API plugin to be installed and activated.</p></div>';
+				echo '<div class="notice notice-error"><p><strong>MCP Abilities - Check Runner</strong> requires WordPress core Abilities API support.</p></div>';
 			}
 		);
 		return false;

@@ -4,6 +4,7 @@ Tags: mcp, abilities, plugin-check
 Requires at least: 6.9
 Tested up to: 7.0
 Requires PHP: 8.0
+Requires Plugins: plugin-check
 Stable tag: 0.2.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -18,7 +19,7 @@ This plugin exposes `plugin-check/run`, which runs the official Plugin Check run
 
 The ability always runs the complete check set, including experimental checks. Check and category filters are ignored for release-gate consistency. Warnings are not acceptable: the ability only reports success when there are zero errors and zero warnings.
 
-The official `plugin-check` plugin must be installed and active.
+The official [Plugin Check](https://wordpress.org/plugins/plugin-check/) plugin must be installed and active.
 
 == Changelog ==
 
