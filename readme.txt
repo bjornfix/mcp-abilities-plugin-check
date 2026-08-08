@@ -12,6 +12,8 @@ MCP bridge for the official WordPress.org Plugin Check plugin.
 
 == Description ==
 
+Download the stable plugin ZIP from https://downloads.devenia.com/mcp-abilities-check-runner.zip.
+
 This plugin exposes `plugin-check/run`, which runs the official Plugin Check runner against an installed plugin and returns structured errors and warnings.
 
 The ability always runs the complete check set, including experimental checks. Check and category filters are ignored for release-gate consistency. Warnings are not acceptable: the ability only reports success when there are zero errors and zero warnings.
